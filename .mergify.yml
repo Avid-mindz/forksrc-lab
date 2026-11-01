@@ -1,4 +1,4 @@
-# i3433 fork-command fixture (public repo, no secrets)
+# i3433/i3457 fork-command fixture (public repo, no secrets)
 queue_rules:
   - name: forkgate
     queue_conditions:
@@ -6,4 +6,5 @@ queue_rules:
     merge_conditions:
       - base = main
       - check-success = forksrc-gate
+      - check-success = forksrc-hold
     merge_method: squash

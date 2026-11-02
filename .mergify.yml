@@ -1,10 +1,17 @@
-# i3433/i3457 fork-command fixture (public repo, no secrets)
+# i3298 fork-PR trust boundary fixture (public repo, no secrets)
 queue_rules:
-  - name: forkgate
+  - name: i3298-forkgate
     queue_conditions:
       - base = main
+      - "title ~= ^i3298"
+      - "author = JnrAvid"
+      - "files ~= ^i3298/"
+      - check-success = i3298-qgate
     merge_conditions:
       - base = main
-      - check-success = forksrc-gate
-      - check-success = forksrc-hold
+      - "title ~= ^i3298"
+      - check-success = i3298-mgate
     merge_method: squash
+merge_queue:
+  max_parallel_checks: 1
+  mode: serial

@@ -1,13 +1,4 @@
-# i3484 direct-merge command fixture (public repo, no secrets)
-# Auto-merge action exists but is deliberately unsatisfiable: pr-absent-gate is never posted.
-pull_request_rules:
-  - name: i3484-automerge-never
-    conditions:
-      - base = main
-      - check-success = pr-absent-gate
-    actions:
-      merge:
-        method: squash
+# i3433/i3457 fork-command fixture (public repo, no secrets)
 queue_rules:
   - name: forkgate
     queue_conditions:
